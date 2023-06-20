@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    :root {
+        /* Your default theme */
+        --background: white;
+        --foreground: black;
+    }
+
+    [data-theme='dark'] {
+        --background: black;
+        --foreground: white;
+    }
+    [data-theme='light'] {
+        --background: "white";
+        --foreground: "black"
+    }
+
+    p {
+        @apply text-black text-lg font-sans font-semibold
+    }
+
+    .header {
+        @apply flex items-center gap-7 h-20 p-5
+    }
+
+    .headerCenter {
+        @apply flex items-center gap-2 border p-3 flex-1 rounded-lg
+    }
+
+    .head {
+        @apply bg-slate-800 p-3 text-2xl font-bold text-white rounded-lg
+    }
+    .imgContainer > * {
+        flex: 1 1 auto;
+    }
+}
